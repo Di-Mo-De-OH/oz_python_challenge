@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정보 입력받기</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <p class="phone"></p>
+    <p class="gender"></p>
+
+
+    <script>
+        const nameElement = document.querySelector("#name")
+        let name = prompt("이름을 입력해주세요")
+        nameElement.textContent = `이름: ${name}`
+
+        const phoneEl = document.querySelector(".phone")
+        let phone = prompt("전화번호 입력")
+        phoneEl.textContent = `전화번호: ${phone}`
+
+        const genderEl = document.querySelector(".gender")
+        let gender = prompt("성별을 입력해주세요")
+        genderEl.textContent = `성별: ${gender}`
+
+    </script>
+</body>
+</html>
