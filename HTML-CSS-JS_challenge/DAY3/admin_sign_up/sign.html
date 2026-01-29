@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 양식</title>
+</head>
+<link href="sign.css" rel="stylesheet">
+<body>
+    <div id = "container">
+        <div>
+            <button class="dark-mode">다크모드</button>
+        </div>
+        <form id="form" action="#">
+            <table class ="table">
+                <caption>회원가입 양식</caption>
+                <tr>
+                    <th>아이디</th>
+                    <td>
+                        <input class="table_input" name ="id" placeholder="아이디" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>비밀번호</th>
+                    <td>
+                        <input required class="table_input" type="password" name="password" placeholder="비밀번호" minlength="8" maxlength="30" pattern="^(?=.*[!@#$%^&*()_+\-=\[\]{};':&quot;\\|,.<>\/?]).+$">
+                        <p id="password-text">*영문,숫자,특수문자를 포함한 8자 이상 30자 미만이어야 합니다.</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>비밀번호확인</th>
+                    <td>
+                        <input required class="table_input" type="password" name="password1" placeholder="비밀번호 확인">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>이름</th>
+                    <td>
+                        <input required class="table_input" name = "name" type="text" placeholder="사용자 이름">
+                    
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>전화번호</th>
+                    <td>
+                        <input required class="table_input" name="phone" placeholder="전화번호">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th>성별</th>
+
+                    <td  id = "label-gender">
+                        <label for="gender-male">
+                            <input  id="gender-male" type = "radio" name="gender" value="male" checked>
+                            남자</label>
+
+                        <label for="gender-female">
+                            <input id ="gender-female"type = "radio" name="gender" value="female" checked>
+                            여자</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>이메일</th>
+                    <td>
+                        <input required class="table_input" type="email" title="정확한 메일 주소를 작성해 주세요" name="email" placeholder="이메일">
+                    </td>
+                </tr>
+
+            
+            </table>
+            <div class="buttons">
+                <input class="button-submit" type="submit" value="가입" class="btn" title="가입">
+            
+            </div>
+
+        </form>
+    </div>
+    <script src="sign.js">
+
+    </script>
+</body>
+</html>

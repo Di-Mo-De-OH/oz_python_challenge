@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 성공!</title>
+    <style>
+        body{
+            margin: 0px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            animation:blackpink 3s ease-in-out infinite;
+        }
+        @keyframes blackpink{
+            0%{
+                background-color: pink;
+                color: black;
+            }
+            50%{
+                background-color: black;
+                color: pink;
+            }
+            100%{
+                background-color: pink;
+                color: black;
+            }
+        }
+        p{
+            font-size: 50px;
+            font-weight:800;
+            
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <p></p>
+
+    <script>
+
+        const p = document.querySelector("p")
+        const name = localStorage.getItem("name");
+        p.textContent = `${name}님 회원가입을 환영합니다!`
+
+
+    </script>
+</body>
+</html>
